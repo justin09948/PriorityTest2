@@ -1,5 +1,5 @@
 body {
-    background: rgb(255, 255, 255);
+    background: rgb(245, 245, 245);
     color: black;
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -54,5 +54,134 @@ ul li.current a::after {
     transform-origin: bottom left;
 }
 .line{
+    border-bottom: 1px solid rgb(97, 97, 97);
+}
+
+.services {
+    position: relative;
+    background-image: url(../../Assets/services-header.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 1px;
+    margin: 0;
+    height: 400px;
+}
+
+.services::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-size: inherit;
+    background-position: inherit;
+    filter: grayscale(100%);
+    z-index: 0; 
+}
+
+.services-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(173, 216, 230, 0.6); 
+    color: white;
+    padding: 0px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    z-index: 1; 
+}
+
+.services h1 {
+    font-size: 80px;
+    color: white;
+    position: relative;
+    z-index: 2; 
+}
+
+
+.services-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    place-items: center;
+}
+
+.service-item{
+    height: 600px;
+    width: 500px;
+    border-radius: 30px;
+    margin: 10%;
+    background-color: white;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+.service-item span{
+    color: lightblue;
+    font-size: 30px;
+}
+
+.service-item p{
+    line-height: 30px;
+    font-size: 15px;
+}
+
+.service-item:hover{
+    border: 2px solid lightblue;
+}
+
+.footer-container{
+    height: 350px;
+    background-color: rgb(39, 39, 39);
+    padding: 1px;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 4%;
+}
+.hover-footer{
+    transition: all 0.3s;
+}
+.hover-footer:hover{
+    color: lightblue;
+}
+.business h1{
+    color: lightblue;
+}
+.business p{
+    color: white;
+    line-height: 30px;
+}
+.contact h1{
+    color: lightblue;
+}
+.contact p{
+    color: white;
+    line-height: 30px;
+}
+.explore h1{
+    color: lightblue;
+}
+.explore p{
+    color: white;
+    line-height: 30px;
+}
+.copyright{
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(32, 32, 32);
+    color: white;
+}
+.priority-footer{
+    color: lightblue;
+}
+.footer-line{
     border-bottom: 1px solid rgb(97, 97, 97);
 }

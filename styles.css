@@ -178,6 +178,8 @@ ul li.current a::after {
     object-fit: cover;
 }
 .s-overlay {
+    border: none;
+    cursor: pointer;
     position: absolute;
     top: 0;
     left: 0;
@@ -411,6 +413,8 @@ ul li.current a::after {
         object-fit: cover;
     }
     .s-overlay {
+        border: none;
+        cursor: pointer;
         position: absolute;
         top: 0;
         left: 0;
@@ -423,7 +427,7 @@ ul li.current a::after {
         align-items: center;
         font-size: 20px;
         font-weight: 700;
-        opacity: 0; 
+        opacity: 1; 
         transition: all 0.4s ease;
     }
     .services-wrapper:hover .s-overlay {

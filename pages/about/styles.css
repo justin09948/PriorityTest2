@@ -72,3 +72,53 @@ ul li.current a::after {
     z-index: -1;
     width: 100%;
 }
+
+.footer-container{
+    height: 350px;
+    background-color: rgb(39, 39, 39);
+    padding: 1px;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 4%;
+}
+.hover-footer{
+    transition: all 0.3s;
+}
+.hover-footer:hover{
+    color: lightblue;
+}
+.business h1{
+    color: lightblue;
+}
+.business p{
+    color: white;
+    line-height: 30px;
+}
+.contact h1{
+    color: lightblue;
+}
+.contact p{
+    color: white;
+    line-height: 30px;
+}
+.explore h1{
+    color: lightblue;
+}
+.explore p{
+    color: white;
+    line-height: 30px;
+}
+.copyright{
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(32, 32, 32);
+    color: white;
+}
+.priority-footer{
+    color: lightblue;
+}
+.footer-line{
+    border-bottom: 1px solid rgb(97, 97, 97);
+}
