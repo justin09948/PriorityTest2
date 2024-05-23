@@ -1,24 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="shortcut icon" type="x-icon" href="../../Assets/logo-transparent.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script defer src="../../index.js"></script>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="../../index.html">Home</a></li>
-                <li class="current"><a href="../services/services.html">Services</a></li>
-                <li><a href="../about/about.html"> Gallery</a></li>
-                <li><a href="../book/book.html"> Contact</a></li>
-            </ul>
-        </nav>
-        <div class="line"></div>
+        <div class="nav-plus">
+            <img src="../../Assets/trans-arrow.png" alt="">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <span></span>
+                <span></span>
+            </label>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li class="current"><a href="../services/services.html">Services</a></li>
+                    <li><a href="../about/about.html"> Gallery</a></li>
+                </ul>
+            </nav>
+            <button onclick="window.location.href='../book/book.html'">Contact</button>
+        </div>
     </header>
+    <div class="line"></div>
     <section class="services">
         <div class="services-overlay">
             <h1>Our Services</h1>
@@ -26,7 +36,7 @@
     </section>
     <section class="service-section">
         <div class="services-container">
-            <div class="service-item">
+            <div class="service-item hidden">
                 <h1>
                     Priority Exterior
                 </h1>
@@ -34,7 +44,7 @@
                     <span>$20</span> <br> Pressure Wash <br> Foam Wash <br> Tire Clean <br> Window Clean <br> Drying Service
                 </p>
             </div>
-            <div class="service-item">
+            <div class="service-item hidden">
                 <h1>
                     Premium Exterior 
                 </h1>
@@ -42,7 +52,7 @@
                     <span>$60</span> <br> Pressure Wash <br> Foam Wash <br> Wet Wax <br>Glaze <br> Tire Shine <br> Tire Clean <br> Window Clean <br> Drying Service 
                 </p>
             </div>
-            <div class="service-item">
+            <div class="service-item hidden">
                 <h1>
                     Premium Interior 
                 </h1>
@@ -50,7 +60,7 @@
                     <span>$85</span> <br> Vacuum <br> Soft Brissle Brush <br> Deep Shampoo <br> Door Cleaning <br> Dashboard Cleaning <br> Window and Mirror Wipe <br> Odor Removal <br> Scent Addition
                 </p>
             </div>
-            <div class="service-item">
+            <div class="service-item hidden">
                 <h1>
                     Full Detail (Interior and Exterior)
                 </h1>
@@ -62,7 +72,7 @@
     </section>
     <footer>
         <div class="footer-container">
-            <div class = "business">
+            <div class = "footer-item">
                 <h1>
                     Business Hours
                 </h1>
@@ -72,16 +82,16 @@
                     <span class="hover-footer">Sun: By Appointment <br></span>
                 </p>
             </div>
-            <div class ="contact">
+            <div class ="footer-item">
                 <h1>
                     Contact Us
                 </h1>
                 <p>
-                    <span class="hover-footer">justinnguyen3022@gmail.com <br></span>
-                    <span class="hover-footer">(516)-838-3139<br></span>
+                    <span class="hover-footer">service@prioritywash.com <br></span>
+                    <span class="hover-footer">(703)-622-9543<br></span>
                 </p>
             </div>
-            <div class = "explore">
+            <div class = "footer-item">
                 <h1>
                     Explore
                 </h1>

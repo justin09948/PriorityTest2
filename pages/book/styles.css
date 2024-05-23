@@ -5,12 +5,33 @@ body {
     margin: 0;
     padding: 0;
 }
+.hidden{
+    opacity: 0;
+    transform: translateX(-25%);
+    transition: all 1s;
+}
+.show{
+    opacity: 1;
+    transform: translateX(0);
+}
+.nav-plus{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: white;
+}
+.nav-plus img{
+    height: 60px;
+    padding: 0;
+    margin: 0;
+}
 ul {
     margin: 0;
     text-align: center;
     padding: 0;
     list-style-type: none;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
     background-color: white;
 }
 
@@ -18,7 +39,7 @@ li {
     display: inline-block;
     margin-right: 2rem;
     font-weight: 300;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 ul a {
@@ -52,6 +73,45 @@ ul a:hover::after {
 ul li.current a::after {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+.nav-plus button{
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    font-weight: 600;
+    font-size: 15px;
+    border: none;
+    color: white;
+    background-color: lightblue;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.nav-plus button:hover{
+    background-color: rgb(131, 172, 184);
+    color: white;
+    border: none;
+}
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 101;
+}
+
+.menu-icon span {
+    height: 3px;
+    width: 25px;
+    border-radius: 20px;
+    background: #000;
+    margin: 2px 0;
+    transition: 0.4s;
+}
+nav ul {
+    display: flex;
 }
 .line{
     border-bottom: 1px solid rgb(97, 97, 97);
@@ -163,6 +223,7 @@ ul li.current a::after {
     padding: 1px;
     color: white;
     display: flex;
+    text-align: center;
     justify-content: space-evenly;
     padding-top: 4%;
 }
@@ -172,24 +233,13 @@ ul li.current a::after {
 .hover-footer:hover{
     color: lightblue;
 }
-.business h1{
+.footer-item{
+    flex: 1;
+}
+.footer-item h1{
     color: lightblue;
 }
-.business p{
-    color: white;
-    line-height: 30px;
-}
-.contact h1{
-    color: lightblue;
-}
-.contact p{
-    color: white;
-    line-height: 30px;
-}
-.explore h1{
-    color: lightblue;
-}
-.explore p{
+.footer-item p{
     color: white;
     line-height: 30px;
 }
@@ -208,6 +258,77 @@ ul li.current a::after {
 }
 
 @media screen and (max-width: 600px){
+    .menu-icon {
+        display: flex;
+    }
+    .nav-plus{
+        height: 15px;
+    }
+    nav {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: lightblue;
+        z-index: 100; 
+        transform: translateX(-100%);
+        transition: transform 0.5s ease-in-out;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: lightblue;
+    }
+
+    nav ul li {
+        margin: 1rem 0;
+        background-color: lightblue;
+    }
+
+    nav ul li a {
+        color: white;
+        background-color: lightblue;
+        font-size: 2rem;
+        text-decoration: none;
+    }
+
+    .nav-plus button {
+        display: none;
+        background-color: white;
+        color: lightblue;
+        position: fixed;
+        bottom: 10rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        max-width: 400px;
+        z-index: 102;
+    }
+
+    #menu-toggle:checked ~ nav {
+        display: flex;
+        transform: translateX(0); 
+    }
+
+    #menu-toggle:checked ~  button {
+        display: inline-block; 
+    }
+
+    #menu-toggle:checked + .menu-icon span:nth-child(1) {
+        transform: rotate(-45deg);
+    }
+
+    #menu-toggle:checked + .menu-icon span:nth-child(2) {
+        transform: rotate(45deg) translate(-5px, -5px);
+    }
     .book-header {
         position: relative;
         background-image: url(../../Assets/book-header.jpg);
@@ -229,8 +350,8 @@ ul li.current a::after {
     .book-container{
         background-color: rgb(255, 255, 255);
         height: 550px;
-        margin-left: 20%;
-        margin-right: 20%;
+        margin-left: 5%;
+        margin-right: 5%;
         margin-top: 10%;
         border-radius: 20px;
         text-align: center;
@@ -239,6 +360,7 @@ ul li.current a::after {
     
     .book-container h1{
         padding-top: 2%;
+        margin: 3%;
         color: lightblue;
     }
     .book-container input{
@@ -252,19 +374,19 @@ ul li.current a::after {
     }
     .name input{
         height: 20px;
-        width: 140px;
+        width: 280px;
         color: rgb(0, 0, 0);
         margin: 1%;
     }
 
     .middle input{
         height: 20px;
-        width: 140px;
+        width: 280px;
     }
     
     .more input{
         padding-bottom: 100px;
-        width: 140px;
+        width: 280px;
     }
     
     .book-container button{

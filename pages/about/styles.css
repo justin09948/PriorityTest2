@@ -6,12 +6,24 @@ body {
     padding: 0;
     height: 400px;
 }
+.nav-plus{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: white;
+}
+.nav-plus img{
+    height: 60px;
+    padding: 0;
+    margin: 0;
+}
 ul {
     margin: 0;
     text-align: center;
     padding: 0;
     list-style-type: none;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
     background-color: white;
 }
 
@@ -19,7 +31,7 @@ li {
     display: inline-block;
     margin-right: 2rem;
     font-weight: 300;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 ul a {
@@ -54,6 +66,45 @@ ul li.current a::after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
+.nav-plus button{
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    font-weight: 600;
+    font-size: 15px;
+    border: none;
+    color: white;
+    background-color: lightblue;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.nav-plus button:hover{
+    background-color: rgb(131, 172, 184);
+    color: white;
+    border: none;
+}
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 101;
+}
+
+.menu-icon span {
+    height: 3px;
+    width: 25px;
+    border-radius: 20px;
+    background: #000;
+    margin: 2px 0;
+    transition: 0.4s;
+}
+nav ul {
+    display: flex;
+}
 .line{
     border-bottom: 1px solid rgb(97, 97, 97);
 }
@@ -79,6 +130,7 @@ ul li.current a::after {
     padding: 1px;
     color: white;
     display: flex;
+    text-align: center;
     justify-content: space-evenly;
     padding-top: 4%;
 }
@@ -88,24 +140,13 @@ ul li.current a::after {
 .hover-footer:hover{
     color: lightblue;
 }
-.business h1{
+.footer-item{
+    flex: 1;
+}
+.footer-item h1{
     color: lightblue;
 }
-.business p{
-    color: white;
-    line-height: 30px;
-}
-.contact h1{
-    color: lightblue;
-}
-.contact p{
-    color: white;
-    line-height: 30px;
-}
-.explore h1{
-    color: lightblue;
-}
-.explore p{
+.footer-item p{
     color: white;
     line-height: 30px;
 }

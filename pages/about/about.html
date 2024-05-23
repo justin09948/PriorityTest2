@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="shortcut icon" type="x-icon" href="../../Assets/logo-transparent.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
@@ -9,14 +10,22 @@
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="../../index.html">Home</a></li>
-                <li><a href="../services/services.html">Services</a></li>
-                <li class="current"><a href="../about/about.html"> About</a></li>
-                <li><a href="../book/book.html"> Contact</a></li>
-            </ul>
-        </nav>
+        <div class="nav-plus">
+            <img src="../../Assets/trans-arrow.png" alt="">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <span></span>
+                <span></span>
+            </label>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../services/services.html">Services</a></li>
+                    <li class="current"><a href="../about/about.html"> Gallery</a></li>
+                </ul>
+            </nav>
+            <button onclick="window.location.href='../book/book.html'">Contact</button>
+        </div>
         <div class="line"></div>
     </header>
     <section class="construction">
@@ -25,7 +34,7 @@
     </section>
     <footer>
         <div class="footer-container">
-            <div class = "business">
+            <div class = "footer-item">
                 <h1>
                     Business Hours
                 </h1>
@@ -35,16 +44,16 @@
                     <span class="hover-footer">Sun: By Appointment <br></span>
                 </p>
             </div>
-            <div class ="contact">
+            <div class ="footer-item">
                 <h1>
                     Contact Us
                 </h1>
                 <p>
-                    <span class="hover-footer">justinnguyen3022@gmail.com <br></span>
-                    <span class="hover-footer">(516)-838-3139<br></span>
+                    <span class="hover-footer">service@prioritywash.com <br></span>
+                    <span class="hover-footer">(703)-622-9543<br></span>
                 </p>
             </div>
-            <div class = "explore">
+            <div class = "footer-item">
                 <h1>
                     Explore
                 </h1>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="shortcut icon" type="x-icon" href="Assets/logo-transparent.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Priority Wash</title>
@@ -8,21 +9,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script defer src="index.js"></script>
 </head>
 <body>
     <header class="header">
         <div class="background-text">Priority</div>
-        <nav>
-            <ul>
-                <li class="current"><a href="index.html">Home</a></li>
-                <li><a href="pages/services/services.html">Services</a></li>
-                <li><a href="pages/about/about.html"> Gallery</a></li>
-                <li><a href="pages/book/book.html"> Contact</a></li>
-            </ul>
-        </nav>
+        <div class="nav-plus">
+            <img src="Assets/trans-arrow.png" alt="">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <span></span>
+                <span></span>
+            </label>
+            <nav>
+                <ul>
+                    <li class="current"><a href="index.html">Home</a></li>
+                    <li><a href="pages/services/services.html">Services</a></li>
+                    <li><a href="pages/about/about.html"> Gallery</a></li>
+                </ul>
+            </nav>
+            <button onclick="window.location.href='pages/book/book.html'">Contact</button>
+        </div>
         <div class="line"></div>
         <div class="header-container">
-            <div class = "header-item">
+            <div class = "header-item hidden">
                 <h1>
                     Car Wash <br><span class="delivery-text">Delivery</span>
                 </h1>
@@ -40,10 +50,10 @@
     </header>
     <section class="about">
         <div class="about-container">
-            <div class="about-item">
+            <div class="about-item hidden">
                 <img src="Assets/about-2.png" alt="">
             </div>
-            <div class="about-item">
+            <div class="about-item hidden">
                 <h1>
                     About Us
                 </h1>
@@ -63,7 +73,7 @@
                 </h1>
             </div>
         </div>
-        <div class="services-container">
+        <div class="services-container hidden">
             <div class="services-wrapper">
                 <img src="Assets/service1.jpg" alt="">
                 <button class="s-overlay" onclick="window.location.href='pages/services/services.html'">Priority Exterior</button>
@@ -82,7 +92,7 @@
         <h1>
             How We Work
         </h1>
-        <div class="process-container">
+        <div class="process-container hidden">
             <div class="process-item">
                 <h2>
                     1
@@ -120,7 +130,7 @@
     </section>
     <footer>
         <div class="footer-container">
-            <div class = "business">
+            <div class = "footer-item">
                 <h1>
                     Business Hours
                 </h1>
@@ -130,16 +140,16 @@
                     <span class="hover-footer">Sun: By Appointment <br></span>
                 </p>
             </div>
-            <div class ="contact">
+            <div class ="footer-item">
                 <h1>
                     Contact Us
                 </h1>
                 <p>
-                    <span class="hover-footer">justinnguyen3022@gmail.com <br></span>
-                    <span class="hover-footer">(516)-838-3139<br></span>
+                    <span class="hover-footer">service@prioritywash.com <br></span>
+                    <span class="hover-footer">(703)-622-9543<br></span>
                 </p>
             </div>
-            <div class = "explore">
+            <div class = "footer-item">
                 <h1>
                     Explore
                 </h1>
