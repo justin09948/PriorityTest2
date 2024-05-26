@@ -305,11 +305,11 @@ nav ul {
     }
 
     #menu-toggle:checked + .menu-icon span:nth-child(1) {
-        transform: rotate(-45deg) translate(-5px, 6px);
+        transform: rotate(-45deg);
     }
 
     #menu-toggle:checked + .menu-icon span:nth-child(2) {
-        transform: rotate(45deg) translate(-5px, -6px);
+        transform: rotate(45deg) translate(-5px, -5px);
     }
     .services {
         position: relative;
@@ -405,33 +405,6 @@ nav ul {
         flex-direction: column;
         justify-content: space-evenly;
         padding-top: 4%;
-    }
-    .hover-footer{
-        transition: all 0.3s;
-    }
-    .hover-footer:hover{
-        color: lightblue;
-    }
-    .business h1{
-        color: lightblue;
-    }
-    .business p{
-        color: white;
-        line-height: 30px;
-    }
-    .contact h1{
-        color: lightblue;
-    }
-    .contact p{
-        color: white;
-        line-height: 30px;
-    }
-    .explore h1{
-        color: lightblue;
-    }
-    .explore p{
-        color: white;
-        line-height: 30px;
     }
     .copyright{
         text-align: center;
