@@ -166,7 +166,12 @@ nav ul {
     z-index: 2; 
 }
 
-
+.service-section{
+    text-align: center;
+}
+.service-section h1, h3{
+    font-size: 50px;
+}
 .services-container{
     display: grid;
     grid-template-columns: repeat(2, 0fr);
@@ -178,26 +183,47 @@ nav ul {
 }
 
 .service-item{
-    height: 600px;
     width: 500px;
     border-radius: 30px;
     background-color: white;
     border: 2px solid transparent;
-    transition: all 0.3s;
+    transition: border 0.3s, max-height 0.5s ease-out, padding-bottom 0.5s ease-out;
+    overflow: hidden;
 }
 
 .service-item span{
     color: lightblue;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .service-item p{
-    line-height: 30px;
-    font-size: 15px;
+    line-height: 40px;
+    font-size: 25px;
 }
 
 .service-item:hover{
     border: 2px solid lightblue;
+}
+
+.show-more-word {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.more-content {
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    max-height: 0;
+}
+
+.show-more-word:hover {
+    color: #0056b3;
 }
 
 .footer-container{
@@ -357,45 +383,21 @@ nav ul {
         position: relative;
         z-index: 2; 
     }
-
-
     .services-container{
-        display: grid;
-        grid-template-columns: repeat(1, 0fr);
-        gap: 20px;
-        padding-top: 5%;
-        padding-bottom: 5%;
-        text-align: center;
-        justify-content: center;
+        grid-template-columns: repeat(1,0fr);
+    }
+    .service-item{
+        width: 400px;
     }
     
-    .service-item{
-        height: 450px;
-        width: 250px;
-        border-radius: 30px;
-        background-color: white;
-        border: 2px solid transparent;
-        transition: all 0.3s;
-    }
-    .service-item h1{
-        font-size: 20px;
-    }
     .service-item span{
-        color: lightblue;
+
         font-size: 20px;
     }
     
     .service-item p{
-        line-height: 20px;
-        font-size: 15px;
+        font-size: 20px;
     }
-    
-    .service-item:hover{
-        border: 2px solid lightblue;
-    }
-
-
-
     .footer-container{
         height: 600px;
         background-color: rgb(39, 39, 39);
@@ -406,18 +408,16 @@ nav ul {
         justify-content: space-evenly;
         padding-top: 4%;
     }
-    .copyright{
-        text-align: center;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: rgb(32, 32, 32);
+
+    .footer-container{
+        height: 600px;
+        background-color: rgb(39, 39, 39);
+        padding: 1px;
         color: white;
-    }
-    .priority-footer{
-        color: lightblue;
-    }
-    .footer-line{
-        border-bottom: 1px solid rgb(97, 97, 97);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-top: 4%;
     }
 }
 
@@ -468,41 +468,21 @@ nav ul {
         position: relative;
         z-index: 2; 
     }
-    
-    
     .services-container{
-        display: grid;
-        grid-template-columns: repeat(2, 0fr);
-        gap: 50px;
-        padding-top: 5%;
-        padding-bottom: 5%;
-        text-align: center;
-        justify-content: center;
+        grid-template-columns: repeat(1,0fr);
     }
-    
     .service-item{
-        height: 550px;
-        width: 250px;
-        border-radius: 30px;
-        background-color: white;
-        border: 2px solid transparent;
-        transition: all 0.3s;
+        width: 400px;
     }
     
     .service-item span{
-        color: lightblue;
-        font-size: 30px;
+
+        font-size: 20px;
     }
     
     .service-item p{
-        line-height: 25px;
-        font-size: 15px;
+        font-size: 20px;
     }
-    
-    .service-item:hover{
-        border: 2px solid lightblue;
-    }
-
     .footer-container{
         height: 600px;
         background-color: rgb(39, 39, 39);
@@ -512,46 +492,6 @@ nav ul {
         flex-direction: column;
         justify-content: space-evenly;
         padding-top: 4%;
-    }
-    .hover-footer{
-        transition: all 0.3s;
-    }
-    .hover-footer:hover{
-        color: lightblue;
-    }
-    .business h1{
-        color: lightblue;
-    }
-    .business p{
-        color: white;
-        line-height: 30px;
-    }
-    .contact h1{
-        color: lightblue;
-    }
-    .contact p{
-        color: white;
-        line-height: 30px;
-    }
-    .explore h1{
-        color: lightblue;
-    }
-    .explore p{
-        color: white;
-        line-height: 30px;
-    }
-    .copyright{
-        text-align: center;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: rgb(32, 32, 32);
-        color: white;
-    }
-    .priority-footer{
-        color: lightblue;
-    }
-    .footer-line{
-        border-bottom: 1px solid rgb(97, 97, 97);
     }
 }
 
@@ -602,38 +542,17 @@ nav ul {
         position: relative;
         z-index: 2; 
     }
-    
-    
-    .services-container{
-        display: grid;
-        grid-template-columns: repeat(2, 0fr);
-        gap: 50px;
-        padding-top: 5%;
-        padding-bottom: 5%;
-        text-align: center;
-        justify-content: center;
-    }
-    
+
     .service-item{
-        height: 550px;
-        width: 300px;
-        border-radius: 30px;
-        background-color: white;
-        border: 2px solid transparent;
-        transition: all 0.3s;
+        width: 400px;
     }
     
     .service-item span{
-        color: lightblue;
-        font-size: 30px;
+        font-size: 20px;
     }
     
     .service-item p{
-        line-height: 25px;
-        font-size: 15px;
+        font-size: 20px;
     }
-    
-    .service-item:hover{
-        border: 2px solid lightblue;
-    }
+
 }
